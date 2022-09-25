@@ -9,7 +9,7 @@
         placeholder="teste2"
       />
 
-      <button title="delete taks">
+      <button title="delete taks" (click)="deleteItemTaskList(i)">
         <img src="../../../../../assets/icon-trash.svg" alt="trash icon" />
       </button>
     </li>
@@ -18,5 +18,5 @@
 
 <app-todo-input-add-itens></app-todo-input-add-itens>
 <app-todo-button-delete-all
-  *ngIf="taskList.length"
+  *ngIf="taskList.length" (click)="deleteAllTaskList()"
 ></app-todo-button-delete-all>

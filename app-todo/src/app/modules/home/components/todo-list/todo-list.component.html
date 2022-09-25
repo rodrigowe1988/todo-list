@@ -7,6 +7,7 @@
         [(ngModel)]="item.task"
         [ngClass]="{ checked: item.checked }"
         placeholder=""
+        (keyup)="validationInput(item.task, i)"
       />
 
       <button title="delete taks" (click)="deleteItemTaskList(i)">
